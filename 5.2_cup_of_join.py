@@ -16,11 +16,3 @@ def join(*list_of_lists, sep='-'):
     for lst in list_of_lists:
         new_list.extend(lst+[sep])
     return new_list[:-1]  # remove the last separator
-
-
-if __name__ == '__main__':
-    # some tests to check the function
-    print(join([1, 2], [8], [9, 5, 6], sep='@'))
-    print(join([1, 2], [8], [9, 5, 6]))
-    print(join([1]))
-    print(join())

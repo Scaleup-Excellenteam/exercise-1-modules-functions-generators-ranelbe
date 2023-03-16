@@ -32,8 +32,8 @@ def get_date(prompt_msg):
 def generate_random_date(date1, date2):
     """
     Generate a random date between date1 and date2
-    :param date1:
-    :param date2:
+    :param date1: the first date
+    :param date2: the second date
     :return: random date between date1 and date2
     """
     return date1 + (date2 - date1) * random.random()

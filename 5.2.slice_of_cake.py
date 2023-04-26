@@ -18,3 +18,16 @@ def get_recipe_price(prices, optionals=None, **ingredients):
             total_price += price_per_gram * amount
     return total_price
 
+
+# add some tests
+def main():
+    test1 = get_recipe_price({'chocolate': 18, 'milk': 8}, chocolate=200, milk=100)
+    print(test1) #44
+    test2 = get_recipe_price({'chocolate': 18, 'milk': 8}, optionals=['milk'], chocolate=300)
+    print(test2) #54
+    test3 = get_recipe_price({})
+    print(test3) #0
+
+
+if __name__ == '__main__':
+    main()

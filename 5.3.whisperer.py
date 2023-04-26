@@ -21,10 +21,9 @@ def find_secret_messages(filename, chunk_size=CHUNK_SIZE):
                 yield message.decode()
 
 
-if __name__ == '__main__':
+def main():
     print(*list(find_secret_messages('logo.jpg')), sep='\n')
 
 
-
-
-
+if __name__ == '__main__':
+    main()

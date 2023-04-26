@@ -19,3 +19,17 @@ def find_files_with_prefix(path, prefix='deep'):
         if file_name.startswith(prefix) and not os.path.isdir(os.path.join(path, file_name)):
             matching_files.append(file_name)
     return matching_files
+
+
+def main():
+    files_list = find_files_with_prefix('./images')
+    print(*files_list, sep='\n')
+    """
+    Two file names were printed: 
+    deeper.svg 
+    deeper2.svg 
+    """
+     
+
+if __name__ == '__main__':
+    main()

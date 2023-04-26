@@ -36,10 +36,11 @@ def generate_random_date(date1, date2):
     :param date2: the second date
     :return: random date between date1 and date2
     """
-    return date1 + (date2 - date1) * random.random()
+    dates_diff = date2 - date1
+    return date1 + dates_diff * random.random()
 
 
-if __name__ == '__main__':
+def main():
     # get dates from user
     date1 = get_date("Enter first date in YYYY-MM-DD format: ")
     date2 = get_date("Enter second date in YYYY-MM-DD format: ")
@@ -51,3 +52,7 @@ if __name__ == '__main__':
     # check if the random date day is Monday
     if random_date.weekday() == Weekday.MONDAY:
         print("It's Monday! I don't have vinaigrette!")
+
+
+if __name__ == '__main__':
+    main()

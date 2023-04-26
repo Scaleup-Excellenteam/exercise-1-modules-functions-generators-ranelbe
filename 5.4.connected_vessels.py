@@ -27,8 +27,12 @@ def interleave_generator(*iterables):
                 yield item
 
 
-if __name__ == '__main__':
+def main():
     # regular version
     print(interleave('abc', [1, 2, 3], ('!', '@', '#')))
     # generator version
     print(list(interleave_generator('abc', [1, 2, 3], ('!', '@', '#'))))
+
+
+if __name__ == '__main__':
+    main()
